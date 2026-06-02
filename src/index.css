@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --navy: #1a2744;
+    --navy-light: #2d3f6b;
+    --cream: #faf9f6;
+    --tape-yellow: #f5e6a3;
+    --tape-blue: #b8d4f0;
+    --highlight-blue: #93c5fd;
+    --highlight-pink: #f9a8d4;
+    --highlight-yellow: #fde68a;
+    --red-accent: #e63946;
+    --ink: #1a1a2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+/* Grid cutting mat background */
+.grid-bg {
+    background-color: var(--cream);
+    background-image:
+        linear-gradient(rgba(26, 39, 68, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 39, 68, 0.07) 1px, transparent 1px),
+        linear-gradient(rgba(26, 39, 68, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 39, 68, 0.03) 1px, transparent 1px);
+    background-size:
+        80px 80px,
+        80px 80px,
+        20px 20px,
+        20px 20px;
+    background-position:
+        -1px -1px,
+        -1px -1px,
+        -1px -1px,
+        -1px -1px;
+}
+
+/* Handwriting font */
+.font-hand {
+    font-family: "Caveat", cursive;
+}
+
+/* Stabilo highlight effect */
+.highlight {
+    position: relative;
+    display: inline;
+    background: linear-gradient(
+        transparent 30%,
+        var(--highlight-blue) 30%,
+        var(--highlight-blue) 85%,
+        transparent 85%
+    );
+    padding: 0 3px;
+}
+
+.highlight-pink {
+    background: linear-gradient(
+        transparent 30%,
+        var(--highlight-pink) 30%,
+        var(--highlight-pink) 85%,
+        transparent 85%
+    );
+    padding: 0 3px;
+}
+
+.highlight-yellow {
+    background: linear-gradient(
+        transparent 30%,
+        var(--highlight-yellow) 30%,
+        var(--highlight-yellow) 85%,
+        transparent 85%
+    );
+    padding: 0 3px;
+}
+
+/* Tape effect */
+.tape {
+    position: absolute;
+    background: rgba(245, 230, 163, 0.75);
+    height: 22px;
+    border-radius: 2px;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Subtle texture lines on tape */
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.03) 3px,
+        rgba(0, 0, 0, 0.03) 4px
+    );
+}
+
+.tape-blue {
+    background: rgba(184, 212, 240, 0.8);
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 3px,
+        rgba(0, 0, 0, 0.03) 3px,
+        rgba(0, 0, 0, 0.03) 4px
+    );
+}
+
+/* Polaroid / printed photo effect */
+.photo-print {
+    background: white;
+    padding: 12px 12px 40px 12px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.07),
+        0 10px 30px rgba(0, 0, 0, 0.12),
+        0 2px 4px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.photo-print::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: white;
+}
+
+/* Sticky note effect */
+.sticky-note {
+    background: #fff9c4;
+    box-shadow:
+        3px 3px 10px rgba(0, 0, 0, 0.12),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+    transform: rotate(-1.5deg);
+    position: relative;
+}
+
+.sticky-note::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.cursor-blink::after {
+    content: "█";
+    animation: blink 1s infinite;
+    color: var(--navy);
+}
+
+/* Underline scribble */
+.scribble-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.scribble-underline::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--red-accent);
+    border-radius: 2px;
+    transform: rotate(-0.5deg) scaleX(1.02);
+}
+
+/* Nav dot */
+.nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: inline-block;
+}
+
+.nav-dot.active {
+    background: var(--red-accent);
+    width: 24px;
+    border-radius: 4px;
+}
