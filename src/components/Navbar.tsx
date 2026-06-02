@@ -8,7 +8,7 @@ export default function Navbar() {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="fixed top-0 left-0 right-0 z-50 px-12 py-2"
+            className="fixed top-0 left-0 right-0 z-50 px-5 md:px-12 md:py-2 py-4"
             style={{
                 backdropFilter: "blur(8px)",
                 backgroundColor: "rgba(250,249,246,0.85)",
@@ -24,7 +24,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Nav links */}
-                <div className="flex items-center gap-8">
+                <div className="flex items-center md:gap-8 gap-4">
                     {navItems.map((item, i) => (
                         <motion.a
                             key={item}

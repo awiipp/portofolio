@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const contacts = [
     {
@@ -83,7 +82,7 @@ export default function ContactSection() {
                     }}
                 >
                     <h2
-                        className="font-hand text-4xl font-bold"
+                        className="font-hand md:text-4xl text-3xl font-bold"
                         style={{ color: "var(--navy)" }}
                     >
                         say hi! ✦
@@ -196,7 +195,7 @@ export default function ContactSection() {
                         </motion.p>
 
                         {/* Contact links as sticky notes */}
-                        <div className="flex gap-6 mb-8 mt-2">
+                        <div className="flex md:gap-6 gap-3 mb-20 md:mb-8 mt-2">
                             {contacts.map((c, i) => (
                                 <motion.a
                                     key={c.label}
@@ -221,9 +220,8 @@ export default function ContactSection() {
                                 >
                                     {/* Stamp lingkaran */}
                                     <div
+                                        className="md:w-[72px] md:h-[72px] w-[60px] h-[60px]"
                                         style={{
-                                            width: "72px",
-                                            height: "72px",
                                             borderRadius: "50%",
                                             background: c.color,
                                             border: `2.5px dashed ${c.iconColor}40`,

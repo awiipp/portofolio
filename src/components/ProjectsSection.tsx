@@ -55,7 +55,7 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="min-h-screen px-8 pt-24"
+            className="min-h-screen px-8 md:pt-24 pt-16"
             style={{ maxWidth: "1200px", margin: "0 auto" }}
         >
             {/* Section header */}
@@ -64,7 +64,7 @@ export default function ProjectsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="mb-24 relative"
+                className="md:mb-24 mb-16 relative"
             >
                 <div
                     className="tape absolute"
@@ -87,7 +87,7 @@ export default function ProjectsSection() {
                     }}
                 >
                     <h2
-                        className="font-hand text-4xl font-bold"
+                        className="font-hand md:text-4xl text-3xl font-bold"
                         style={{ color: "var(--navy)" }}
                     >
                         my projects ✦

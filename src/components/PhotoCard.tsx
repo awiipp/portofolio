@@ -22,15 +22,14 @@ export default function PhotoCard() {
             initial={{ opacity: 0, y: 30, rotate: 3 }}
             animate={{ opacity: 1, y: 0, rotate: 3 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="flex justify-center items-center py-[40px] -mt-[160px]"
+            className="flex justify-center items-center pt-10 md:pt-0 -mt-[160px]"
         >
             {/* Main photo print */}
             <motion.div
                 whileHover={{ rotate: 2, scale: 1.02, y: -5 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="photo-print relative z-10"
+                className="photo-print px-[12px] pt-[12px] pb-[20px] relative z-10 md:w-[260px] w-[240px]"
                 style={{
-                    width: "260px",
                     transform: "rotate(3deg)",
                     cursor: "pointer",
                 }}
@@ -70,7 +69,7 @@ export default function PhotoCard() {
                 </div>
 
                 <div
-                    className="font-hand text-center pt-2 pb-1"
+                    className="font-hand text-center pt-2"
                     style={{
                         fontSize: "1.1rem",
                         color: "var(--navy)",
@@ -86,11 +85,9 @@ export default function PhotoCard() {
                 initial={{ opacity: 0, rotate: -5, x: 20 }}
                 animate={{ opacity: 1, rotate: -6, x: 20 }}
                 transition={{ delay: 0.5, duration: 0.7 }}
-                className="photo-print absolute z-0"
+                className="photo-print absolute z-0 md:w-[220px] w-[170px] md:-right-[10px]"
                 onClick={() => window.open("/assets/files/cv.pdf", "_blank")}
                 style={{
-                    width: "220px",
-                    right: "-10px",
                     top: "60px",
                     transform: "rotate(-6deg)",
                     cursor: "pointer",
@@ -223,7 +220,7 @@ export default function PhotoCard() {
                 </div>
 
                 <div
-                    className="font-hand text-center pt-2 pb-1"
+                    className="font-hand text-center pt-2"
                     style={{
                         fontSize: "1.1rem",
                         color: "var(--navy)",

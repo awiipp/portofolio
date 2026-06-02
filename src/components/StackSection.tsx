@@ -87,7 +87,7 @@ export default function StackSection() {
                     }}
                 >
                     <h2
-                        className="font-hand text-4xl font-bold"
+                        className="font-hand md:text-4xl text-3xl font-bold"
                         style={{ color: "var(--navy)" }}
                     >
                         my stack ✦

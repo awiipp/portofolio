@@ -23,9 +23,12 @@ export default function HeroSection() {
                 position: "relative",
             }}
         >
-            <div className="w-full grid grid-cols-2 gap-16 items-center">
-                {/* ── LEFT COLUMN ── */}
-                <div className="flex flex-col gap-6 pb-16">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 md:gap-16 gap-10 items-center">
+                <div className="md:order-2 md:mt-0 mt-[150px]">
+                    <PhotoCard />
+                </div>
+
+                <div className="flex flex-col gap-6 pb-16 md:order-1">
                     {/* Badge */}
                     <motion.div
                         variants={fadeUp}
@@ -130,7 +133,7 @@ export default function HeroSection() {
                             href="#projects"
                             whileHover={{ scale: 1.04, y: -2 }}
                             whileTap={{ scale: 0.97 }}
-                            className="font-hand text-lg px-7 py-3 rounded"
+                            className="font-hand text-lg md:px-7 md:py-3 px-4 py-2 rounded"
                             style={{
                                 backgroundColor: "var(--navy)",
                                 color: "white",
@@ -147,7 +150,7 @@ export default function HeroSection() {
                             href="#contact"
                             whileHover={{ scale: 1.04, y: -2 }}
                             whileTap={{ scale: 0.97 }}
-                            className="font-hand text-lg px-7 py-3 rounded"
+                            className="font-hand text-lg md:px-7 md:py-3 px-3.5 py-1.5 rounded"
                             style={{
                                 backgroundColor: "transparent",
                                 color: "var(--navy)",
@@ -162,9 +165,6 @@ export default function HeroSection() {
                     </motion.div>
                 </div>
 
-                {/* ── RIGHT COLUMN ── */}
-                <PhotoCard />
-
                 <div
                     style={{
                         position: "absolute",
@@ -172,11 +172,11 @@ export default function HeroSection() {
                         right: 0,
                         left: 0,
                         zIndex: 5,
-                        display: "flex",
                         justifyContent: "flex-end",
                         overflow: "hidden",
                         pointerEvents: "none",
                     }}
+                    className="hidden md:flex"
                 >
                     <BridgeSection />
                 </div>
