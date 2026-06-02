@@ -17,6 +17,7 @@ const projects = [
         tape: "yellow",
         image: smk,
         caption: "community project · 2026",
+        url: "https://smkn46jaktim.sch.id",
     },
     {
         title: "Zinc Blog Platform",
@@ -29,6 +30,7 @@ const projects = [
         tape: "blue",
         image: zinc,
         caption: "personal project · 2025",
+        url: "https://github.com/awiipp/zinc",
     },
     {
         title: "Ranpo API Testing",
@@ -41,6 +43,7 @@ const projects = [
         tape: "yellow",
         image: ranpo,
         caption: "open-source tool · 2026",
+        url: "https://github.com/awiipp/ranpo",
     },
     {
         title: "Nihongo Quiz",
@@ -53,6 +56,7 @@ const projects = [
         tape: "blue",
         image: nihongo,
         caption: "educational project · 2026",
+        url: "https://nihongo-quizu.vercel.app",
     },
     {
         title: "RupaJakarta",
@@ -65,6 +69,7 @@ const projects = [
         tape: "blue",
         image: jakarta,
         caption: "cultural showcase · 2025",
+        url: "https://rupajakarta.vercel.app",
     },
 ];
 
@@ -148,6 +153,10 @@ export default function ProjectsSection() {
                             y: -8,
                             zIndex: 20,
                         }}
+                        onClick={() =>
+                            project.url !== "#" &&
+                            window.open(project.url, "_blank", "noreferrer")
+                        }
                         className="relative"
                         style={{ cursor: "pointer" }}
                     >
@@ -214,6 +223,22 @@ export default function ProjectsSection() {
                                 >
                                     {project.tag}
                                 </span>
+                                {/* Lihat overlay */}
+                                <div
+                                    className="absolute font-hand text-sm font-bold"
+                                    style={{
+                                        bottom: "0",
+                                        right: "0",
+                                        padding: "6px 12px",
+                                        background:
+                                            "linear-gradient(to left, rgba(26,39,68,0.65) 50%, transparent)",
+                                        color: "var(--cream)",
+                                        letterSpacing: "0.03em",
+                                        pointerEvents: "none",
+                                    }}
+                                >
+                                    → view
+                                </div>
                             </div>
 
                             {/* Bottom text — photocard style */}
