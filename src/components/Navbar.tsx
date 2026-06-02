@@ -34,20 +34,12 @@ export default function Navbar() {
                             transition={{ delay: 0.1 * i, duration: 0.4 }}
                             className="font-hand text-lg relative group"
                             style={{
-                                color: i === 0 ? "var(--navy)" : "#64748b",
+                                color: "var(--navy)",
                                 textDecoration: "none",
-                                fontWeight: i === 0 ? 600 : 400,
+                                fontWeight: 400,
                             }}
                         >
                             {item}
-                            {i === 0 && (
-                                <span
-                                    className="absolute -bottom-1 left-0 w-full h-0.5 rounded"
-                                    style={{
-                                        backgroundColor: "var(--red-accent)",
-                                    }}
-                                />
-                            )}
                             <span
                                 className="absolute -bottom-1 left-0 w-0 h-0.5 rounded transition-all duration-300 group-hover:w-full"
                                 style={{ backgroundColor: "var(--navy-light)" }}

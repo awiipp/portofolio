@@ -6,10 +6,10 @@ const stacks = [
         pin: "var(--red-accent)",
         rotate: -1.5,
         cards: [
-            { name: "Laravel", icon: "🔴", level: "proficient" },
-            { name: "PHP", icon: "🐘", level: "proficient" },
-            { name: "Go", icon: "🐹", level: "learning" },
-            { name: "REST API", icon: "⚡", level: "proficient" },
+            { name: "Laravel", icon: "", level: "proficient" },
+            { name: "PHP", icon: "", level: "proficient" },
+            { name: "Go", icon: "", level: "learning" },
+            { name: "REST API", icon: "", level: "proficient" },
         ],
     },
     {
@@ -17,10 +17,10 @@ const stacks = [
         pin: "var(--highlight-blue)",
         rotate: 1,
         cards: [
-            { name: "React.js", icon: "⚛️", level: "proficient" },
-            { name: "Vue.js", icon: "💚", level: "learning" },
-            { name: "TypeScript", icon: "🔷", level: "familiar" },
-            { name: "Tailwind", icon: "🌊", level: "proficient" },
+            { name: "React.js", icon: "", level: "proficient" },
+            { name: "Vue.js", icon: "", level: "learning" },
+            { name: "TypeScript", icon: "", level: "familiar" },
+            { name: "Tailwind", icon: "", level: "proficient" },
         ],
     },
     {
@@ -28,8 +28,8 @@ const stacks = [
         pin: "var(--highlight-yellow)",
         rotate: -0.5,
         cards: [
-            { name: "MySQL", icon: "🐬", level: "proficient" },
-            { name: "PostgreSQL", icon: "🐘", level: "familiar" },
+            { name: "MySQL", icon: "", level: "proficient" },
+            { name: "PostgreSQL", icon: "", level: "familiar" },
         ],
     },
     {
@@ -37,10 +37,8 @@ const stacks = [
         pin: "var(--highlight-pink)",
         rotate: 2,
         cards: [
-            { name: "Git", icon: "🌿", level: "proficient" },
-            { name: "Postman", icon: "📮", level: "proficient" },
-            { name: "Docker", icon: "🐳", level: "learning" },
-            { name: "Linux", icon: "🐧", level: "learning" },
+            { name: "Git", icon: "", level: "proficient" },
+            { name: "Postman", icon: "", level: "proficient" },
         ],
     },
 ];

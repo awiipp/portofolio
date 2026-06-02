@@ -10,14 +10,14 @@ const contacts = [
     },
     {
         label: "linkedin",
-        href: "https://linkedin.com",
+        href: "https://www.linkedin.com/in/sayidariipp/",
         color: "var(--highlight-blue)",
         iconColor: "#1d4ed8",
         rotate: 3,
     },
     {
         label: "email",
-        href: "mailto:sayid@email.com",
+        href: "mailto:sayidariipp@email.com",
         color: "var(--highlight-pink)",
         iconColor: "#be185d",
         rotate: -4,

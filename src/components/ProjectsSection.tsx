@@ -1,53 +1,70 @@
 import { motion } from "framer-motion";
+import jakarta from "../assets/images/projects/jakarta.png";
+import nihongo from "../assets/images/projects/nihongo.png";
+import ranpo from "../assets/images/projects/ranpo.png";
+import smk from "../assets/images/projects/smk.png";
+import zinc from "../assets/images/projects/zinc.png";
 
 const projects = [
     {
-        title: "Admin Panel CMS",
+        title: "SMKN 46 Jakarta Website",
         description:
-            "Internal CMS for a logistics company. Role-based access, data export, and real-time dashboard.",
-        tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-        tag: "internship",
-        tagColor: "var(--highlight-pink)",
+            "Developed the official school website for SMKN 46 Jakarta as a community contribution project, providing information, announcements, and school profiles for students and visitors.",
+        tech: ["Laravel", "React", "Inertia", "MySQL"],
+        tag: "college",
+        tagColor: "var(--highlight-blue)",
         rotate: -2,
         tape: "yellow",
-        image: "https://placehold.co/400x280/e2e8f0/94a3b8?text=CMS",
-        caption: "admin panel, 2024",
+        image: smk,
+        caption: "community project · 2026",
     },
     {
-        title: "REST API Service",
+        title: "Zinc Blog Platform",
         description:
-            "RESTful API for a mobile app backend. Auth, CRUD, and payment gateway integration.",
-        tech: ["Go", "PostgreSQL", "JWT"],
+            "A multi-role blogging platform featuring administrators, editors, authors, and readers, with content management and publishing workflows.",
+        tech: ["Laravel", "React", "Inertia", "MySQL"],
         tag: "personal",
         tagColor: "var(--highlight-yellow)",
         rotate: 2,
         tape: "blue",
-        image: "https://placehold.co/400x280/dbeafe/93c5fd?text=API",
-        caption: "go backend, 2024",
+        image: zinc,
+        caption: "personal project · 2025",
     },
     {
-        title: "E-Commerce Fullstack",
+        title: "Ranpo API Testing",
         description:
-            "Fullstack web app with product catalog, cart, checkout, and admin dashboard.",
-        tech: ["React.js", "Laravel", "MySQL"],
-        tag: "college",
-        tagColor: "var(--highlight-blue)",
+            "A command-line API testing tool built in Go, featuring an interactive terminal user interface for managing and testing API requests.",
+        tech: ["Go"],
+        tag: "personal",
+        tagColor: "var(--highlight-yellow)",
         rotate: -1.5,
         tape: "yellow",
-        image: "https://placehold.co/400x280/fce7f3/f9a8d4?text=Shop",
-        caption: "final project, 2023",
+        image: ranpo,
+        caption: "open-source tool · 2026",
     },
     {
-        title: "Inventory System",
+        title: "Nihongo Quiz",
         description:
-            "Internal tool for stock tracking, purchase orders, and supplier data. Live in production.",
-        tech: ["PHP", "Laravel", "MySQL"],
-        tag: "internship",
-        tagColor: "var(--highlight-pink)",
+            "An interactive website introducing Japanese language and culture through quizzes and educational mini-games designed for beginners.",
+        tech: ["React"],
+        tag: "personal",
+        tagColor: "var(--highlight-yellow)",
         rotate: 1,
         tape: "blue",
-        image: "https://placehold.co/400x280/fef9c3/fde68a?text=Inventory",
-        caption: "production app, 2024",
+        image: nihongo,
+        caption: "educational project · 2026",
+    },
+    {
+        title: "RupaJakarta",
+        description:
+            "A multilingual website showcasing Jakarta and Betawi culture, available in Indonesian, English, and Japanese, complete with interactive quizzes.",
+        tech: ["React"],
+        tag: "personal",
+        tagColor: "var(--highlight-yellow)",
+        rotate: 1,
+        tape: "blue",
+        image: jakarta,
+        caption: "cultural showcase · 2025",
     },
 ];
 
@@ -277,7 +294,7 @@ export default function ProjectsSection() {
                 >
                     more on{" "}
                     <a
-                        href="https://github.com"
+                        href="https://github.com/awiipp"
                         target="_blank"
                         rel="noreferrer"
                         className="highlight"
